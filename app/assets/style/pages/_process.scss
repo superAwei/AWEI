@@ -1,0 +1,65 @@
+.bg-fixed{
+  background-image: url("https://images.unsplash.com/photo-1515462277126-2dd0c162007a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=935&q=80");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+// QA 動畫
+.QA h3:hover{
+  color:rgb(116, 116, 116);
+}
+// RWD
+@media (min-width: 300px) {
+    .lh-lg{
+        line-height:50px;
+    }
+    .p-yl{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+   
+  }
+
+@media (min-width: 576px) {
+    .lh-lg{
+        line-height:30px;
+    }
+    .p-yl{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+  }
+  
+  
+  @media (min-width: 768px) {
+    .lh-lg{
+        line-height:50px;
+    }
+    .p-yl{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+   
+  }
+  
+  @media (min-width: 992px) {
+    .lh-lg{
+        line-height:50px;
+    }
+    .p-yl{
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .lh-lg{
+        line-height:60px;
+    }
+    .p-yl{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+  }

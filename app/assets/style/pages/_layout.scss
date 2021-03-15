@@ -1,0 +1,113 @@
+
+// 導航列設定
+.logo{
+    text-indent:101%;
+    overflow:hidden;
+    white-space:nowrap;
+    background-repeat:no-repeat;
+    display:block;
+}
+
+.header{
+    border-bottom:1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    // 位置放在最高
+    z-index: 10000;
+}
+.header .logo{
+    width: 100px;
+    height: 60px;
+
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li a{
+    display: block;
+    padding:20px;
+    text-decoration: none;
+    color:rgb(153, 153, 153);
+}
+.menu li a:hover{
+   color: #ffffff;
+}
+/* RWD 選單在 PC 先隱藏 */
+.showmenu{
+    display: none;
+    text-decoration: none;
+    color:#fff;
+    font-size: 30px;
+    span{
+        color:#fff;
+    }
+}
+
+
+/* RWD */
+@media(max-width:564px){ 
+    /*   固定表頭語法   */
+      .header{
+        position:fixed;
+        width: 100%;
+      }
+       .menu{
+           /* 先隱藏 pc 版的選單並變成直式排列方式*/
+           flex-direction: column;
+           max-height: 0px;
+           overflow: hidden;
+           /* 隱藏選單結束 */
+           transition: max-height 1s;
+           margin-top:1px;
+           /* 把選單絕對定位疊在網頁上 */
+           position: absolute;
+           z-index: 100;
+           top:60px;
+           left: 0;
+           right: 0;
+           /* left 與 right 是要讓選單可以左右撐滿的用途 */
+           background-color: #fff;
+           color:#262626;
+       }
+       .menu li{
+           border-bottom: 1px solid #6c6c6c;
+       }
+       .menu li a{
+           transition: all 0.2s;
+           color: #262626;
+           /* 滑鼠 hover 漸變的效果 */
+       }
+       .menu li a:hover{
+           background-color:#262626;
+           color: #fff;
+       }
+      .showmenu{
+          display: block;
+          padding:.3em;
+    /*       padding:10px; */
+      }
+    
+      .menu-show .menu{
+          max-height: 500px;
+          /* 讓原本的  max-height: 0px 變 500px */
+      }
+    }
+
+
+footer li a{
+    color: #6c6c6c;
+}
+footer li a:hover{
+    transition:0.3s;
+    color:rgb(255, 255, 255);
+}
+
+
+.contact_us span{
+    font-size: 200px;
+    color:#fff;
+}
